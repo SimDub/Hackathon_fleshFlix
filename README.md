@@ -30,7 +30,7 @@ If you develop on Windows, you should edit you git configuration to change your 
 
 ## URLs availables
 
-* Home page at [localhost:8000/](localhost:8000/monster/index)
+* Home page at [localhost:8000/monster/index](localhost:8000/monster/index)
 
 ## How does URL routing work ?
 
