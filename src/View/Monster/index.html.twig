@@ -1,0 +1,31 @@
+{% extends 'layout.html.twig' %}
+{% block content %}
+
+    <h1>Quel genre de victime es-tu ?</h1>
+    <form method="post" class="question" action="profiles">
+
+    {% for question, values in questions %}
+
+            <h2>{{ question }}</h2>
+            <div class="row space-around">
+
+                {%  for value in values %}
+
+                        <div class="form-check col">
+                            <input class="form-check-input radio-button" type="radio" value="{{ value.Lettre }}" name="{{ question }}" id="{{ value.Text }}">
+                            <label class="form-check-label" for="{{ value.Text }}">
+                                <img class="imageForm slide" src="{{ value.Image }}">
+                                <div class="descriptionImage">
+                                    <p>{{ value.Text }}</p>
+                                </div>
+                            </label>
+                        </div>
+                {% endfor %}
+            </div>
+
+    {%  endfor %}
+        <button type="submit" class="button zoom-out">Submit</button>
+    </form>
+
+{% endblock %}
+
